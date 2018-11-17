@@ -15,6 +15,7 @@ Instructions=============
     Making the table/storedprocedure===========================
 
 BEGIN
+
 CREATE TABLE Uploads
 (
 ID int IDENTITY (1, 1) PRIMARY KEY NOT NULL,
@@ -28,7 +29,6 @@ END
 BEGIN
 
 CREATE PROC UploadsProc
-
 
 @UserId int,
 @URL nvarchar(1000)
@@ -46,3 +46,5 @@ VALUES (
 @UserId,
 @URL
 )
+
+END
