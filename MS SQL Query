@@ -1,0 +1,35 @@
+BEGIN
+
+CREATE TABLE Uploads
+(
+ID int IDENTITY (1, 1) PRIMARY KEY NOT NULL,
+DateCreated datetime2(7) NOT NULL,
+URL nvarchar(1000) NOT NULL,
+UserId int NOT NULL
+)
+
+END
+
+BEGIN
+
+CREATE PROC UploadsProc
+
+
+@UserId int,
+@URL nvarchar(1000)
+
+AS
+
+INSERT INTO Uploads(
+
+UserId,
+URL
+)
+
+VALUES (
+
+@UserId,
+@URL
+)
+
+END
